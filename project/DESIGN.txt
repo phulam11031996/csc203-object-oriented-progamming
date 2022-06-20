@@ -1,0 +1,13 @@
+getCurrentImage()'s parameter either an Entity or BackGround class. So I decide to leave it in the Functions.java file.
+
+getNumFromRange(), adjacent() get called from the methods in Entity class. There is no instance of the class getting passed into getNumFromRange(). So I put it in Entity to promote modularity. 
+
+getImageList() calls processImageLine(), which then calls setAlpha() and getImage(). And since there are no other methods/functions call them. So all of these functions should be in the same file, which is ImageStore.java to promote modularity. 
+
+loadWorld() in VirtualWorld.java calls load(), which then calls processLine, which then call parseBackground(), parseDude(), parseObstacle(), parseFairy(), parseHouse(), parseTree(), and parseSapling(). Since all of this functions doesn't get called from anywhere else. I think it makes sence to put them all in the same file, which is VirtualWorld.java
+
+findNearest() in WorldModel.java calls nearestEntity(), which then calls distanceSquared(). So I put them in the same file since nearestEntity() and distanceSquared() only get called from there. 
+
+shiftView() in WorldView.java calls clamp(), which has 3 int as it parameters. So I put clamp() in WorldView.java. 
+
+create*() all return an instance of Entity. They're are sorta similar to a constructer method. So I think it makes sense to put it in the Entity.java

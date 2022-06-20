@@ -1,0 +1,5 @@
+The event is triggered when there is a click on where the grid is not occupied.
+The zombie will appear with 8 smokes around it.
+The zombie will chase down other dudes and turn the other dudes into a zombie. 
+Phu - creates a zombie; It will chase down other dude and turn other dudes into zombies.
+Ali - changing the background image around the zombie when there is a click.
